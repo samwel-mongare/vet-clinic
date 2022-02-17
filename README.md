@@ -1,31 +1,43 @@
-# curriculum-databases-projects-template
+# Vet Clinic Database
 
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
+> The project involves creating a relation database that contains several tables that interact with each other to create a vet clinic database.
 
+## Project screenshots
 
-## Getting Started
+![screenshot](./app_screenshot.png)
 
-This repository includes files with plain SQL that can be used to recreate a database:
+Additional description about the project and its features.
 
-- Use [schema.sql](./schema.sql) to create all tables.
-- Use [data.sql](./data.sql) to populate tables with sample data.
-- Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
+## Built With
 
+- SQL
+
+## How to Setup
+
+> You can simply clone or download [this repository](https://github.com/Mosams/vet-clinic.git), and use your favorite browser or code editor to run this program.
+
+- To open the project after download, simply double click the index.html file
+
+- To open this project using vs code ( for this example) or your favorite code editor, you can follow the guide below:
+  > in your cmd or command line navigate to where this project is located, then;
+
+```cmd
+cd vet-clinic
+```
+
+> thereafter run
+
+```cmd
+code .
+```
 
 ## Authors
 
-👤 **Author1**
+👤 **Mongare S.**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/Mosams/)
+- Twitter: [@twitterhandle](https://twitter.com/sam_mongare)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/sammy-mongare-b8288310b/)
 
 ## 🤝 Contributing
 
@@ -39,9 +51,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Microverse Team for facilitating project requirements and resources
 
 ## 📝 License
 
