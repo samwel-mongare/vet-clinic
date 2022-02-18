@@ -56,7 +56,7 @@ INSERT INTO species (name)
 VALUES('Pokemon');
 
 INSERT INTO species (name)
-VALUES('Digimon';
+VALUES('Digimon');
 
 -- Modify your inserted animals so it includes the species_id value:
 
