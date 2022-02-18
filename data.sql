@@ -90,25 +90,25 @@ VALUES('Digimon';
     SET 
         owner_id = 2
     WHERE
-        name='Gabumon' OR 'Pikachu';
+        name='Gabumon' OR name='Pikachu';
 
 -- Bob owns Devimon and Plantmon.
      UPDATE animals 
     SET 
         owner_id = 3
     WHERE
-        name='Devimon' OR 'Plantmon';
+        name='Devimon' OR name='Plantmon';
     
     -- Melody Pond owns Charmander, Squirtle, and Blossom.
      UPDATE animals 
     SET 
         owner_id = 4
     WHERE
-        name='Charmander' OR 'Squirtle' OR 'Blossom';
+        name='Charmander' OR name='Squirtle' OR name='Blossom';
 
     -- Dean Winchester owns Angemon and Boarmon.
      UPDATE animals 
     SET 
         owner_id = 5
     WHERE
-        name='Angemon' OR 'Boarmon';
+        name='Angemon' OR name='Boarmon';
