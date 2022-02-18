@@ -41,9 +41,13 @@ BEGIN TRANSACTION;
 UPDATE animals
  SET species = 'unspecified';
 
+ SELECT species from animals;
+
 --  roll back the change and verify that species columns went back to the state before transaction
 
 ROLLBACK TRANSACTION;
+
+SELECT species from animals;
 
 -- SECOND TRANSACTION
 
@@ -63,11 +67,19 @@ SET
 WHERE
     species IS NULL;
 
+    COMMIT;
+
+    SELECT species from animals;
+
     -- Inside a transaction delete all records in the animals table, then roll back the transaction.
 
     TRUNCATE TABLE animals;
 
+    SELECT * from animals;
+
     ROLLBACK TRANSACTION;
+
+    SELECT * from animals;
 
     -- Delete all animals born after Jan 1st, 2022.
 
