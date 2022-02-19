@@ -58,3 +58,32 @@ ALTER TABLE animals
 
     ALTER TABLE animals 
     ADD FOREIGN KEY (owner_id) REFERENCES owners;
+
+    -- Vet clinic database: add "join table" for visits
+
+    CREATE TABLE vets (
+    id integer GENERATED ALWAYS AS IDENTITY,
+    name varchar(100),
+    age integer,
+    date_of_graduation date,
+    PRIMARY KEY(id)
+    );
+
+    -- Create a "join table" called specializations to handle this relationship.
+    CREATE TABLE specializations (
+	vet_id integer NOT NULL,
+	species_id integer NOT NULL,
+	FOREIGN KEY (vet_id) REFERENCES vets (id) ON DELETE RESTRICT ON UPDATE CASCADE,
+	FOREIGN KEY (species_id) REFERENCES species (id) ON DELETE RESTRICT ON UPDATE CASCADE,
+	PRIMARY KEY (vet_id, species_id)
+    );
+
+    -- Create a "join table" called visits to handle this relationship, it should also keep track of the date of the visit.
+    CREATE TABLE visits (
+	animal_id integer NOT NULL,
+	vets_id integer NOT NULL,
+    date_of_visit date,
+	FOREIGN KEY (animal_id) REFERENCES animals (id) ON DELETE RESTRICT ON UPDATE CASCADE,
+	FOREIGN KEY (vets_id) REFERENCES vets (id) ON DELETE RESTRICT ON UPDATE CASCADE,
+	PRIMARY KEY (date_of_visit, animal_id, vets_id)
+    );
