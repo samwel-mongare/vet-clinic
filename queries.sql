@@ -245,7 +245,7 @@ WHERE
     ASC LIMIT 1;
 
     -- Details for most recent visit: animal information, vet information, and date of visit.
-    SELECT v.name, a.name, date_of_visit 
+    SELECT v.*, a.*, date_of_visit 
     FROM vets v
     JOIN visits vv ON v.id = vv.vets_id
     JOIN animals a ON a.id = vv.animal_id  
