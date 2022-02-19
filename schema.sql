@@ -85,5 +85,5 @@ ALTER TABLE animals
     date_of_visit date,
 	FOREIGN KEY (animal_id) REFERENCES animals (id) ON DELETE RESTRICT ON UPDATE CASCADE,
 	FOREIGN KEY (vets_id) REFERENCES vets (id) ON DELETE RESTRICT ON UPDATE CASCADE,
-	PRIMARY KEY (animal_id, vets_id)
+	PRIMARY KEY (date_of_visit, animal_id, vets_id)
     );
