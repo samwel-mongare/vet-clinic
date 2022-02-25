@@ -80,10 +80,26 @@ ALTER TABLE animals
 
     -- Create a "join table" called visits to handle this relationship, it should also keep track of the date of the visit.
     CREATE TABLE visits (
+    id integer GENERATED ALWAYS AS IDENTITY, 
 	animal_id integer NOT NULL,
 	vets_id integer NOT NULL,
     date_of_visit date,
 	FOREIGN KEY (animal_id) REFERENCES animals (id) ON DELETE RESTRICT ON UPDATE CASCADE,
 	FOREIGN KEY (vets_id) REFERENCES vets (id) ON DELETE RESTRICT ON UPDATE CASCADE,
-	PRIMARY KEY (date_of_visit, animal_id, vets_id)
+	PRIMARY KEY (id)
     );
+
+    -- Add an email column to your owners table
+    ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+    -- Introducing a non-clustered index to the visits table for animal id.
+
+    CREATE INDEX animal_visit_asc ON visits(animal_id ASC);
+
+    -- Introducing a non-clustered index to the visits table for vets id.
+
+    CREATE INDEX vets_id_asc ON visits(vets_id ASC);
+
+    -- Introducing a non-clustered index to the visits table for vets id.
+
+    CREATE INDEX email_asc ON owners(email ASC);
