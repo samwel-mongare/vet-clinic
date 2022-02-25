@@ -270,3 +270,11 @@ WHERE
     GROUP BY ss.name
     ORDER BY speciesId
     DESC LIMIT 1;
+
+    -- Queries to be optimized
+
+    SELECT COUNT(*) FROM visits where animal_id = 4;
+
+    SELECT animal_id,vets_id, date_of_visit FROM visits where vets_id = 2 LIMIT 100;
+
+    SELECT * FROM owners where email = 'owner_18327@mail.com';
